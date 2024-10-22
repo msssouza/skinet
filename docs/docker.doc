@@ -1,0 +1,8 @@
+Recreate the Container: After making changes, make sure to recreate the container:
+
+docker-compose down
+docker-compose up -d
+
+Check Logs: If you encounter issues again, check the logs with:
+
+docker-compose logs sql
