@@ -1,5 +1,8 @@
+-- Change dotnet environment
+echo $ASPNETCORE_ENVIRONMENT
 export ASPNETCORE_ENVIRONMENT=Development
 
+-- Migration
 dotnet ef migrations add InitialCreate -s src/API -p src/Infrastructure
 dotnet ef migrations remove --context StoreContext -s src/API/ -p src/Infrastructure/
 dotnet ef database update -s src/API/ -p src/Infrastructure/
